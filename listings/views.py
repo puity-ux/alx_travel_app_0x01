@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.http import JsonResponse
 
-# Create your views here.
+def listings_list(request):
+    return JsonResponse({"message": "List of listings"})
+
+def listing_detail(request, pk):
+    return JsonResponse({"message": f"Detail of listing {pk}"})
